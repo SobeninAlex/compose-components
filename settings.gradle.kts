@@ -24,4 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "compose-components"
 include(":app")
-include(":compose-components_lib")
+include(":components")
