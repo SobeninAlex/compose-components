@@ -50,27 +50,11 @@ publishing {
     publications {
         create<MavenPublication>("library") {
             groupId = "ru.sobeninalex.compose"
-//            artifactId = "compose-components"
-//            version = "1.0"
-//            from(components["release"])
-
             afterEvaluate {
                 from(components["release"])
             }
         }
     }
-
-//    repositories {
-//        maven {
-//            name = "local"
-//            url = uri("${buildDir}/repo")
-//        }
-//
-//        maven {
-//            name = "localMaven"
-//            url = uri("${System.getProperty("user.home")}/.m2/repository")
-//        }
-//    }
 }
 
 dependencies {
