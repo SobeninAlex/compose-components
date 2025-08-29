@@ -48,10 +48,11 @@ android {
 
 publishing {
     publications {
-        register<MavenPublication>("release") {
-            groupId = "ru.sobeninalex"
-            artifactId = "compose-components"
-            version = "1.0"
+        create<MavenPublication>("library") {
+            groupId = "ru.sobeninalex.compose"
+//            artifactId = "compose-components"
+//            version = "1.0"
+//            from(components["release"])
 
             afterEvaluate {
                 from(components["release"])
@@ -59,17 +60,17 @@ publishing {
         }
     }
 
-    repositories {
-        maven {
-            name = "local"
-            url = uri("${buildDir}/repo")
-        }
-
-        maven {
-            name = "localMaven"
-            url = uri("${System.getProperty("user.home")}/.m2/repository")
-        }
-    }
+//    repositories {
+//        maven {
+//            name = "local"
+//            url = uri("${buildDir}/repo")
+//        }
+//
+//        maven {
+//            name = "localMaven"
+//            url = uri("${System.getProperty("user.home")}/.m2/repository")
+//        }
+//    }
 }
 
 dependencies {
