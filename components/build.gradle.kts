@@ -30,6 +30,7 @@ android {
     publishing {
         singleVariant("release") {
             withSourcesJar()
+            withJavadocJar()
         }
     }
 
@@ -47,9 +48,9 @@ android {
 
 publishing {
     publications {
-        create<MavenPublication>("release") {
+        register<MavenPublication>("release") {
             groupId = "ru.sobeninalex"
-            artifactId = "compose"
+            artifactId = "compose-components"
             version = "1.0"
 
             afterEvaluate {
@@ -59,20 +60,14 @@ publishing {
     }
 
     repositories {
-        mavenLocal()
-
         maven {
-            name = "BuildDir"
-            url = uri(rootProject.layout.buildDirectory.dir("maven-repo"))
+            name = "local"
+            url = uri("${buildDir}/repo")
         }
 
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com")
-            credentials {
-                username = properties["username"].toString()
-                password = properties["password"].toString()
-            }
+            name = "localMaven"
+            url = uri("${System.getProperty("user.home")}/.m2/repository")
         }
     }
 }
