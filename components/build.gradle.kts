@@ -48,10 +48,8 @@ android {
 
 publishing {
     publications {
-        register<MavenPublication>("release") {
-            groupId = "ru.sobeninalex"
-            artifactId = "compose-components"
-            version = "1.4"
+        create<MavenPublication>("library") {
+            groupId = "ru.sobeninalex.compose"
             afterEvaluate {
                 from(components["release"])
             }
