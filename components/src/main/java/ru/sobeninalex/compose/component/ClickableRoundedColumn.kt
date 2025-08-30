@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.sobeninalex.compose.theme.WhiteColor
 import ru.sobeninalex.compose.theme.roundedCornerShape20
@@ -25,7 +27,7 @@ fun ClickableRoundedColumn(
     isClickEnabled: Boolean = true,
     backgroundColor: Color = WhiteColor,
     shape: Shape = roundedCornerShape20,
-    contentPadding: PaddingValues = PaddingValues(horizontal = 0.dp, vertical = 16.dp),
+    contentPadding: PaddingValues = PaddingValues(16.dp),
     verticalArrangement: Arrangement.Vertical = Arrangement.Top,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     content: @Composable ColumnScope.() -> Unit
@@ -42,4 +44,13 @@ fun ClickableRoundedColumn(
     ) {
         content()
     }
+}
+
+@Preview
+@Composable
+private fun ClickableRoundedColumnPreview() {
+    ClickableRoundedColumn(
+        modifier = Modifier.height(150.dp),
+        onClick = {},
+    ) {}
 }

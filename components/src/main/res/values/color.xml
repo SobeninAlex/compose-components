@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_color">#697A8B</color>
+    <color name="gray_color_70">#96A2AE</color>
+    <color name="gray_color_50">#B4BCC5</color>
+    <color name="gray_color_20">#E1E4E8</color>
+    <color name="gray_color_10">#EDEFF0</color>
+
+    <color name="white_color">#FFFFFF</color>
+    <color name="white_color_70">#B3FFFFFF</color>
+    <color name="white_color_50">#80FFFFFF</color>
+    <color name="white_color_20">#33FFFFFF</color>
+
+    <color name="black_color">#11161C</color>
+    <color name="black_color_50">#8011161C</color>
+    <color name="black_color_30">#4D11161C</color>
+    <color name="black_color_20">#3311161C</color>
+    <color name="black_color_10">#1A11161C</color>
+    <color name="black_color_05">#0D11161C</color>
+</resources>
